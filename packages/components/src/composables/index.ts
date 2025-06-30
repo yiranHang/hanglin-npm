@@ -106,7 +106,7 @@ export function useToggle(initialValue: boolean = false) {
  * 使用定时器
  */
 export function useInterval(callback: () => void, delay: number | null) {
-  let intervalId: number | null = null
+  let intervalId: ReturnType<typeof setInterval> | null = null
 
   const start = () => {
     if (delay !== null && !intervalId) {

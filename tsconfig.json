@@ -21,33 +21,12 @@
     "emitDecoratorMetadata": true,
     "baseUrl": ".",
     "paths": {
+      "@/*": ["packages/*"],
       "@hanglin/core": ["packages/core/src"],
       "@hanglin/utils": ["packages/utils/src"],
       "@hanglin/components": ["packages/components/src"]
     }
   },
-  "include": [
-    "packages/*/src/**/*",
-    "packages/*/*.ts",
-    "*.ts",
-    "*.js"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "packages/*/dist",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ],
-  "references": [
-    {
-      "path": "./packages/core"
-    },
-    {
-      "path": "./packages/utils"
-    },
-    {
-      "path": "./packages/components"
-    }
-  ]
+  "include": ["packages/*/src/**/*", "packages/*/*.ts", "*.ts", "*.js"],
+  "exclude": ["node_modules", "**/dist/**", "packages/*/dist/**", "**/*.spec.ts", "**/*.test.ts", "**/vite.config.ts"]
 }

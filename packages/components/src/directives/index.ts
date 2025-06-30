@@ -29,7 +29,7 @@ export function createDebounceDirective() {
   return {
     name: 'debounce',
     handler: (el: HTMLElement, callback: () => void, delay: number = 300) => {
-      let timeoutId: number | null = null
+      let timeoutId: ReturnType<typeof setTimeout> | null = null
 
       const handleEvent = () => {
         if (timeoutId) {
@@ -111,7 +111,7 @@ export function createLongPressDirective() {
   return {
     name: 'long-press',
     handler: (el: HTMLElement, callback: () => void, duration: number = 500) => {
-      let pressTimer: number | null = null
+      let pressTimer: ReturnType<typeof setTimeout> | null = null
 
       const start = () => {
         pressTimer = setTimeout(callback, duration)

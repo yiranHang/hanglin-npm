@@ -71,7 +71,7 @@ export function useAsyncState<T>(promise: () => Promise<T>, initialState?: T) {
  */
 export function useDebouncedValue<T>(getValue: () => T, delay: number = 300) {
   let debouncedValue: T = getValue()
-  let timeoutId: number | null = null
+  let timeoutId: ReturnType<typeof setTimeout> | null = null
 
   const updateValue = () => {
     if (timeoutId) {

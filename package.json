@@ -1,73 +1,54 @@
 {
-  "name": "@hanglin/workspace",
+  "name": "@hanglin/components",
   "version": "1.0.0",
-  "private": true,
-  "description": "Hanglin 工具库集合 - Monorepo",
+  "description": "Hanglin 组件库",
   "type": "module",
-  "workspaces": [
-    "packages/*"
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
   ],
   "scripts": {
-    "build": "pnpm -r build",
-    "build:watch": "pnpm -r build:watch",
-    "dev": "pnpm -r dev",
-    "clean": "pnpm -r clean && rimraf node_modules",
-    "typecheck": "pnpm -r typecheck",
-    "lint": "pnpm -r lint",
-    "lint:fix": "pnpm -r lint:fix",
-    "lint:lint-staged": "lint-staged",
-    "format": "pnpm -r format",
-    "stylelint": "stylelint \"**/*.{css,scss,vue}\" --fix",
-    "commit": "git-cz",
-    "test": "pnpm -r test",
-    "publish:all": "pnpm -r publish",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "pnpm build && changeset publish",
-    "check": "pnpm typecheck && pnpm lint && pnpm stylelint",
-    "prepare": "husky install"
+    "build": "vite build",
+    "build:watch": "vite build --watch",
+    "dev": "vite build --watch",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write src/**/*.{ts,tsx,json,md}",
+    "test": "echo No tests specified"
   },
   "keywords": [
     "hanglin",
-    "monorepo",
-    "typescript",
-    "tools",
-    "utilities"
+    "components",
+    "ui",
+    "typescript"
   ],
   "author": "Hanglin <hanglin@example.com>",
   "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
   "devDependencies": {
-    "@changesets/cli": "^2.29.5",
-    "@commitlint/cli": "^19.6.0",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.6",
+    "@hanglin/utils": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^8.35.0",
     "@typescript-eslint/parser": "^8.35.0",
+    "@vitejs/plugin-vue": "^6.0.0",
     "eslint": "^9.30.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.5.1",
-    "eslint-plugin-vue": "^10.2.0",
-    "globals": "^15.13.0",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
-    "rollup": "^4.24.4",
-    "rollup-plugin-dts": "^6.1.1",
-    "stylelint": "^16.21.0",
-    "stylelint-config-standard": "^38.0.0",
-    "stylelint-prettier": "^5.0.3",
+    "terser": "^5.43.1",
     "tslib": "^2.8.1",
     "typescript": "^5.6.3",
-    "unplugin-auto-import": "^19.2.0",
-    "unplugin-vue-components": "^28.5.0",
-    "vue-eslint-parser": "^10.1.4"
+    "vite": "^7.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-progress": "^0.0.7"
   },
-  "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=9.0.0"
-  },
-  "packageManager": "pnpm@9.14.4"
+  "publishConfig": {
+    "registry": "http://hanglin.site:4873/",
+    "access": "restricted"
+  }
 }

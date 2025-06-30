@@ -5,6 +5,7 @@ Hanglin 工具库集合 - 一个包含核心功能、通用工具和组件的 Mo
 ## 包结构
 
 ### [@hanglin/core](./packages/core)
+
 核心工具库，包含 HTTP 请求客户端等核心功能。
 
 - HTTP 客户端（基于 Axios）
@@ -12,6 +13,7 @@ Hanglin 工具库集合 - 一个包含核心功能、通用工具和组件的 Mo
 - 状态检查工具
 
 ### [@hanglin/utils](./packages/utils)
+
 通用工具库，提供常用的工具函数。
 
 - 类型检查函数
@@ -19,6 +21,7 @@ Hanglin 工具库集合 - 一个包含核心功能、通用工具和组件的 Mo
 - 防抖和节流函数
 
 ### [@hanglin/components](./packages/components)
+
 组件库，提供常用的 Vue 组件。
 
 - 基础 Vue 组件
@@ -75,7 +78,7 @@ pnpm release
 ## 技术栈
 
 - **TypeScript** - 静态类型检查
-- **Rollup** - 打包工具
+- **Vite** - 现代化构建工具
 - **pnpm** - 包管理器
 - **Changesets** - 版本管理
 - **ESLint** - 代码检查
