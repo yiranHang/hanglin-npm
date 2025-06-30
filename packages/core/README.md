@@ -68,14 +68,7 @@ const hash = crypto.simpleHash('test string')
 你也可以直接导入所有功能：
 
 ```typescript
-import {
-  HttpClient,
-  createHttpClient,
-  getItem,
-  setItem,
-  generateUUID,
-  base64Encode
-} from '@hanglin/core'
+import { HttpClient, createHttpClient, getItem, setItem, generateUUID, base64Encode } from '@hanglin/core'
 ```
 
 ## License

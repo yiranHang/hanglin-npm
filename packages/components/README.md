@@ -87,12 +87,7 @@ const { getStatus, startListening } = hooks.useNetworkStatus()
 你也可以直接导入所有功能：
 
 ```typescript
-import {
-  generateClassName,
-  useLocalStorage,
-  createClickOutsideDirective,
-  useEventListener
-} from '@hanglin/components'
+import { generateClassName, useLocalStorage, createClickOutsideDirective, useEventListener } from '@hanglin/components'
 ```
 
 ## 在 Vue 项目中使用

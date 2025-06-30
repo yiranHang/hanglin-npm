@@ -18,7 +18,15 @@ export default defineConfig([
         ...globals.browser,
         ...globals.es6,
         ...globals.node,
-        ...projectGlobals
+        ...projectGlobals,
+        // DOM types
+        WindowEventMap: 'readonly',
+        AddEventListenerOptions: 'readonly',
+        EventListener: 'readonly',
+        HTMLElement: 'readonly',
+        Window: 'readonly',
+        Document: 'readonly',
+        Event: 'readonly'
       }
     },
     plugins: {

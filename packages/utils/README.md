@@ -86,13 +86,7 @@ const masked = formatters.maskPhoneNumber('13800138000') // "138****8000"
 你也可以直接导入所有功能：
 
 ```typescript
-import { 
-  isArray, 
-  deepClone, 
-  debounce,
-  isValidEmail,
-  formatFileSize
-} from '@hanglin/utils'
+import { isArray, deepClone, debounce, isValidEmail, formatFileSize } from '@hanglin/utils'
 ```
 
 ## License
