@@ -1,6 +1,6 @@
 {
   "name": "@hanglin/utils",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Hanglin 通用工具库",
   "type": "module",
   "main": "dist/index.js",
@@ -31,8 +31,12 @@
   "license": "MIT",
   "devDependencies": {
     "rimraf": "^6.0.1",
+    "terser": "^5.43.1",
     "tslib": "^2.8.1",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vite": "^7.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-progress": "^0.0.7"
   },
   "publishConfig": {
     "registry": "http://hanglin.site:4873/",
