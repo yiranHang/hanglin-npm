@@ -4,16 +4,13 @@
 
 ## 🔧 配置文件
 
-### 1. Husky 钩子
+### 1. Husky 钩子 (兼容 v10.0.0)
 
 #### Pre-commit 钩子 (`.husky/pre-commit`)
 
 在每次提交前自动运行 lint-staged：
 
 ```bash
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 pnpm run lint:lint-staged
 ```
 
@@ -22,11 +19,10 @@ pnpm run lint:lint-staged
 验证提交消息格式是否符合 conventional commits 规范：
 
 ```bash
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 npx --no-install commitlint --edit "$1"
 ```
+
+> **注意**: 从 Husky v9.1.6 开始，不再需要 `#!/usr/bin/env sh` 和 `. "$(dirname -- "$0")/_/husky.sh"` 这两行代码。这些在 v10.0.0 中将失效。
 
 ### 2. Lint-Staged 配置 (`.lintstagedrc.json`)
 
