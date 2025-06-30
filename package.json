@@ -1,0 +1,73 @@
+{
+  "name": "@hanglin/workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hanglin 工具库集合 - Monorepo",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:watch": "pnpm -r build:watch",
+    "dev": "pnpm -r dev",
+    "clean": "pnpm -r clean && rimraf node_modules",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "lint:lint-staged": "lint-staged",
+    "format": "pnpm -r format",
+    "stylelint": "stylelint \"**/*.{css,scss,vue}\" --fix",
+    "commit": "git-cz",
+    "test": "pnpm -r test",
+    "publish:all": "pnpm -r publish",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish",
+    "check": "pnpm typecheck && pnpm lint && pnpm stylelint",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "hanglin",
+    "monorepo",
+    "typescript",
+    "tools",
+    "utilities"
+  ],
+  "author": "Hanglin <hanglin@example.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
+    "eslint": "^9.30.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-vue": "^10.2.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.24.4",
+    "rollup-plugin-dts": "^6.1.1",
+    "stylelint": "^16.21.0",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "tslib": "^2.8.1",
+    "typescript": "^5.6.3",
+    "unplugin-auto-import": "^19.2.0",
+    "unplugin-vue-components": "^28.5.0",
+    "vue-eslint-parser": "^10.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.14.4"
+}

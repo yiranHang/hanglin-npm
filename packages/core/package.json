@@ -1,0 +1,54 @@
+{
+  "name": "@hanglin/core",
+  "version": "1.0.0",
+  "description": "Hanglin 核心工具库",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "dev": "rollup -c -w",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write src/**/*.{ts,tsx,json,md}",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "hanglin",
+    "core",
+    "request",
+    "http",
+    "axios",
+    "typescript"
+  ],
+  "author": "Hanglin <hanglin@example.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "axios": "^1.0.0",
+    "qs": "^6.0.0"
+  },
+  "devDependencies": {
+    "@hanglin/utils": "workspace:*",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/qs": "^6.9.16",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.24.4",
+    "rollup-plugin-dts": "^6.1.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.6.3"
+  },
+  "publishConfig": {
+    "registry": "http://hanglin.site:4873/",
+    "access": "restricted"
+  }
+}

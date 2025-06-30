@@ -1,0 +1,27 @@
+{
+  "*.{js,jsx,ts,tsx}": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "*.{json,jsonc}": [
+    "prettier --write"
+  ],
+  "*.vue": [
+    "eslint --fix",
+    "stylelint --fix",
+    "prettier --write"
+  ],
+  "*.{css,scss,less,postcss}": [
+    "stylelint --fix",
+    "prettier --write"
+  ],
+  "*.{md,mdx}": [
+    "prettier --write"
+  ],
+  "*.{yml,yaml}": [
+    "prettier --write"
+  ],
+  "package.json": [
+    "prettier --write"
+  ]
+}
