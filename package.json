@@ -52,7 +52,7 @@
     "vue-eslint-parser": "^10.1.4"
   },
   "publishConfig": {
-    "registry": "http://hanglin.site:4873/",
+    "registry": "http://49.234.191.202:4873/",
     "access": "restricted"
   }
 }

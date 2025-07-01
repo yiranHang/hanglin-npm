@@ -6,7 +6,7 @@ import { execSync } from 'child_process'
  * 检查私有 npm registry 是否可用
  */
 async function checkRegistry() {
-  const registryUrl = 'http://hanglin.site:4873/'
+  const registryUrl = 'http://49.234.191.202:4873/'
 
   console.log('🔍 正在检查私有 npm registry...')
   console.log(`📍 Registry URL: ${registryUrl}`)
