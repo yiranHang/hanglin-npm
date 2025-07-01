@@ -1,6 +1,6 @@
 {
   "name": "@hanglin/core",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Hanglin 核心工具库",
   "type": "module",
   "main": "dist/index.js",
